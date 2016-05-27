@@ -1,0 +1,12 @@
+parameters:
+  CinderEnableIscsiBackend: false
+  CinderEnableRbdBackend: false
+  CinderEnableNfsBackend: true
+  NovaEnableRbdBackend: false
+  GlanceBackend: 'file'
+  CinderNfsMountOptions: 'retry=1'
+  CinderNfsServers: '172.16.0.254:/nfs/cinder'
+  GlanceFilePcmkManage: true
+  GlanceFilePcmkFstype: 'nfs'
+  GlanceFilePcmkDevice: '172.16.0.254:/nfs/glance'
+  GlanceFilePcmkOptions: 'rw,sync,context=system_u:object_r:glance_var_lib_t:s0'
