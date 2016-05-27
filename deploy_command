@@ -1,0 +1,15 @@
+openstack overcloud deploy --templates -e /home/stack/templates/storage-environment.yaml --ntp-server 10.5.26.10 --control-flavor control --compute-flavor compute --control-scale 3 --compute-scale 5
+
+#storage-environment.yaml
+#parameters:
+#  CinderEnableIscsiBackend: false
+#  CinderEnableRbdBackend: false
+#  CinderEnableNfsBackend: true
+#  NovaEnableRbdBackend: false
+#  GlanceBackend: 'file'
+#  CinderNfsMountOptions: 'retry=1'
+#  CinderNfsServers: '172.16.0.254:/nfs/cinder'
+#  GlanceFilePcmkManage: true
+#  GlanceFilePcmkFstype: 'nfs'
+#  GlanceFilePcmkDevice: '172.16.0.254:/nfs/glance'
+#  GlanceFilePcmkOptions: 'rw,sync,context=system_u:object_r:glance_var_lib_t:s0'
