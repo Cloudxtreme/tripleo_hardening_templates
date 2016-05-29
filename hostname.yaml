@@ -1,0 +1,7 @@
+parameter_defaults:
+  HostnameMap:
+    overcloud-controller-0: plieb-control-000
+    overcloud-controller-1: plieb-control-001
+    overcloud-controller-2: plieb-control-002
+    overcloud-compute-0: plieb-compute-000
+    overcloud-compute-1: plieb-compute-001
