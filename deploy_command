@@ -1,5 +1,5 @@
-openstack overcloud deploy -t 75 --templates \
---ntp-server 10.5.26.10 \
+openstack overcloud deploy --templates \
+-t 90 --ntp-server 10.5.26.10 \
 --control-flavor control --compute-flavor compute \
 --control-scale 3 --compute-scale 2 \
 -e /home/stack/templates/storage-environment.yaml \
