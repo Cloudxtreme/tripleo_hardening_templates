@@ -1,5 +1,6 @@
 openstack overcloud deploy --templates \
 -t 90 --ntp-server 10.5.26.10 \
+--libvirt-type qemu \
 --control-flavor control --compute-flavor compute \
 --control-scale 3 --compute-scale 2 \
 -e /home/stack/templates/storage-environment.yaml \

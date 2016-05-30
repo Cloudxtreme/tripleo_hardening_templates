@@ -5,16 +5,16 @@
 parameter_defaults:
   rhel_reg_activation_key: OSP7
   rhel_reg_auto_attach: ""
-  rhel_reg_base_url: https://sat6.e2e.bos.redhat.com
+  rhel_reg_base_url: ""
   rhel_reg_environment: ""
-  rhel_reg_force: ""
+  rhel_reg_force: true
   rhel_reg_machine_name: ""
   rhel_reg_org: e2e
   rhel_reg_password: ""
   rhel_reg_pool_id: ""
   rhel_reg_release: ""
   rhel_reg_repos: ""
-  rhel_reg_sat_url: https://sat6.e2e.bos.redhat.com
+  rhel_reg_sat_url: http://sat6.e2e.bos.redhat.com
   rhel_reg_server_url: ""
   rhel_reg_service_level: ""
   rhel_reg_user: ""

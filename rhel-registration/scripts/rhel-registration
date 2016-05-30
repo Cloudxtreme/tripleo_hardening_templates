@@ -15,7 +15,9 @@ opts=
 attach_opts=
 sat5_opts=
 repos="repos --enable rhel-7-server-rpms"
-satellite_repo="rhel-7-server-rh-common-rpms"
+#satellite_repo="rhel-7-server-rh-common-rpms"
+#satellite_repo="rhel-7-server-satellite-tools-6.1-rpms"
+satellite_repo=""
 if [ -n "${REG_AUTO_ATTACH:-}" ]; then
     opts="$opts --auto-attach"
 
@@ -49,7 +51,7 @@ if [ -n "${REG_ENVIRONMENT:-}" ]; then
 fi
 
 if [ -n "${REG_FORCE:-}" ]; then
-    opts="$opts --force"
+    opts="$opts --force --insecure"
     sat5_opts="$sat5_opts --force"
 fi
 
@@ -102,8 +104,10 @@ function detect_satellite_version {
         echo Satellite 6 detected at $REG_SAT_URL
         satellite_version=6
     else
-        echo Satellite 5 detected at $REG_SAT_URL
-        satellite_version=5
+        echo Satellite 6 detected at $REG_SAT_URL
+        satellite_version=6
+        #echo Satellite 5 detected at $REG_SAT_URL
+        #satellite_version=5
     fi
 }
 
@@ -117,14 +121,15 @@ case "${REG_METHOD:-}" in
         ;;
     satellite)
         detect_satellite_version
-        if [ "satellite_version" = "6" ]; then
-            repos="$repos --enable ${satellite_repo}"
+        if [ "$satellite_version" = "6" ]; then
+#        if [ "satellite_version" = "6" ]; then
+            #repos="$repos --enable ${satellite_repo}"
             rpm -Uvh "$REG_SAT_URL/pub/katello-ca-consumer-latest.noarch.rpm" || true
             subscription-manager register $opts
             subscription-manager $repos
-            yum install -y katello-agent || true # needed for errata reporting to satellite6
-            katello-package-upload
-            subscription-manager repos --disable ${satellite_repo}
+            #yum install -y katello-agent || true # needed for errata reporting to satellite6
+            #katello-package-upload
+            #subscription-manager repos --disable ${satellite_repo}
         else
             pushd /usr/share/rhn/
             curl -k -O $REG_SAT_URL/pub/RHN-ORG-TRUSTED-SSL-CERT
