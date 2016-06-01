@@ -15,8 +15,7 @@ COPYEXT=$(date +%Y%m%d-%H%M%S)
 PROVIP=$(grep "^IPADDR" /etc/sysconfig/network-scripts/ifcfg-br-ctlplane | sed -e 's/IPADDR=//')
 LOCALNET=$( echo $PROVIP | cut -d\. -f2 )
 
-PUBLICIP=$(grep "^IPADDR" /etc/sysconfig/network-scripts/ifcfg-bond1.${LOCALNET}01 | sed -e 's/IPADDR=//')
-
+PUBLICIP=$(grep "^IPADDR" /etc/sysconfig/network-scripts/ifcfg-eth1 | sed -e 's/IPADDR=//')
 
 #-----------------------------------------------------------------------
 
@@ -519,9 +518,6 @@ motd()
 --------------------------------------------------------------------------------
                         ATENCAO: Aviso Importante
  
-E proibido o acesso nao autorizado. Esse e um recurso de acesso restrito
-devidamente controlado, monitorado e de responsabilidade do Itau Unibanco
- 
 Se voce nao possui autorizacao para acessar este recurso, desconecte
 imediatamente ou podera sofrer sancoes legais e/ou acao disciplinar.
  
@@ -700,33 +696,9 @@ resolv-conf()
 
    case $LOCALNET in
 
-     28) cat << EOF > /etc/resolv.conf
-search prod.cloud.ihf ctmm1.prod.cloud.ihf
-nameserver 10.28.18.15
-nameserver 10.29.18.15
-nameserver 10.30.18.15
-
-options timeout:1
-options attempts:2
-EOF
-     ;;
-
-     29) cat << EOF > /etc/resolv.conf
-search prod.cloud.ihf ctmm2.prod.cloud.ihf
-nameserver 10.29.18.15
-nameserver 10.28.18.15
-nameserver 10.30.18.15
-
-options timeout:1
-options attempts:2
-EOF
-     ;;
-
-     30|31) cat << EOF > /etc/resolv.conf
-search prod.cloud.ihf ctsp.prod.cloud.ihf des.cloud.ihf ctsp.des.cloud.ihf
-nameserver 10.30.18.15
-nameserver 10.28.18.15
-nameserver 10.29.18.15
+     16) cat << EOF >> /etc/resolv.conf
+search redhat.local
+nameserver 192.168.122.1
 
 options timeout:1
 options attempts:2
@@ -864,21 +836,13 @@ apache()
 
 #-----------------------------------------------------------------------
 
-
 # Modules available but not activated
-#selinux
-#home-permissions
-#netrc
-
-#if $1 ; then
-#
-#   $1
-#
-#else
-
-#         ffirewall \
 
       for MODULE in \
+         #selinux
+         #home-permissions
+         #netrc
+         #ffirewall
          backup \
          keystone-ssl-certs \
          cinder \
@@ -907,19 +871,9 @@ apache()
          apache \
          fstab ; do
 
-         #read -p "Run $MODULE ? [s/N] " ANSWER
-
-         #case $ANSWER in
-
                  echo -e "\n##########" >> $LOG
-         #   s|S) echo -e "\n##########" >> $LOG
                  $MODULE
-                 read -p "Press ENTER to continue..."
-
-         #esac
-
+		 sleep 10
       done
-
-#fi
 
 echo -e "\n### End of hardening " >> $LOG
