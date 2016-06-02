@@ -1,0 +1,121 @@
+{
+  "nodes": [
+    {
+      "pm_user": "stack",
+      "arch": "x86_64",
+      "name": "overcloud-compute1",
+      "pm_addr": "192.168.122.1",
+      "pm_password": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAwX5fp7XEQWqpUWcrjfin4FsItLsYYBqGlV/6Zlr6g4ZOqVNH\nNw2n8ZSd9rIoJyG+bh6xcOmDTNs2IQ2wb4z1qnWfuomnLhK3FKIsoeNETz0XZYQg\n8veUUaUWn9YTon4mExwlG2maP3UlbsKRrNaSdkIPv44rYWqcXZ4fPRKsQ5iODyJa\nJ4238T5MzaLJv+2Q9vU4eS/7MFdG9Aw9rz71z7HihYPRPB7/2ISC8l1n79aJHKNv\n/MyVko6LIu1l4HJUNlKslJ8/RVQpfnJzBHoj0VCYfZx5GlSrWG2qaWQO4bBhZV3T\nqy/mNM7ft6RkkyklV69W5+e3EfKTBoTKDDN/3QIDAQABAoIBADatFiyW8WEm2beV\n9rnEdPOx5bDkWYv2kucs2t4HgVifICU60hndcwKR410tlKkSIPSPGcb1RVP3ccE/\nVAcBhv3nBP66HRKo2TEsbn5EcS4O7kiSYJknmrLDerQp0xyMlwe5YUbwvVSHLs+w\njWeQroxaOIcBjoKVlJ/jqaIhX6otuGXjp9HZwecM5B8GtbAv1jwutzg+Eah1Gqnp\n4W7fdozHFEGe56DGnrtb+T840UXpl4Y0L7p0CmMinyT7Byzb/j24yuFns9tt83nP\nzpNaVBLWRfM37J16vhEYz7RRtjT7arE72dnZKH4TC5g1eVYGXRzst7oHZjd65Ifx\nkFavhSECgYEA8fdM4t6YZnYrdsFvVonFSYv3+AavrRdTuZJsZAeoWD7BANhLfHHn\nC6N7T0e6QqjQTpUHWXmQVkBYYb9X2VK6m432V86+leeLUUR8YqDKT5WMottQm+H9\niQVK1FJ1J6lnBx2mXTJj0bn6/RW2hhsgaVDZpFEEs07TvEDtZHMyc/kCgYEAzLdb\noN+Sm2mIw2MLHdocvoWraQUuCr3dNC1Zhkmk8dwCKR8RvvlFVATkbCzFq5PtVwz7\n9LDwgoPy62xRfjvdlTfAuVLJp8njWIpsuIYtmr0YOzqtEwQfn+ai0XwImBVxPQU0\nH4oFdQxstdASUH5CR8ebln1MJ2a1OedHPlXIHAUCgYEAyxmLffrd7VNPVFU1gWwP\nH5bPQ29JUn78Fg4j0SrkUX4LPwxPAFwTVZ+Zx4grffx5LRzGmIIDd4J3LUURFifs\n3tkgZ7/wFZ/PPx2/UoIojvi2nZR9avscd0Dr+KBmGi6FfmGS3TOIuefkFz98f8CR\nShVFOjmPOnr2G1Rcby6KsPECgYBk4D1winrNxjU0Qovpy966K1gJyhmkBWcJHQeu\nWn/DBmyyIrM17dMx0a9VdsJ5B82+RZGqQ75gMfDz/U4y7AEGVJDNQXRJD/zNVni4\nfLXgOCnGleVPJ4sF2jqFC5+YgYhpTzUeDX8e7F5tQPilXXH/uOZ8Q4XRLJVE0SiU\nGOUgmQKBgQDhY4tA+QYjXTOdo4QAXNk718Y7h4oSFawpNpyx9JiQLKfEvwuIWgQk\n2rsWw5e7vlvfL9NlGkSsZcTfRXTSCmoO5gVUqjIREtve1MPAfETOeHF2BAGRfysP\npopf1RLgKUI826p8gNVqTR0oQR1C0bJ2z1jMzsq/pR6S1TDr+xA0qw==\n-----END RSA PRIVATE KEY-----",
+      "pm_type": "pxe_ssh",
+      "mac": [
+        "52:54:00:d4:bd:63"
+      ],
+      "cpu": "1",
+      "memory": "1024",
+      "disk": "10"
+    },
+    {
+      "pm_user": "stack",
+      "arch": "x86_64",
+      "name": "overcloud-compute2",
+      "pm_addr": "192.168.122.1",
+      "pm_password": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAwX5fp7XEQWqpUWcrjfin4FsItLsYYBqGlV/6Zlr6g4ZOqVNH\nNw2n8ZSd9rIoJyG+bh6xcOmDTNs2IQ2wb4z1qnWfuomnLhK3FKIsoeNETz0XZYQg\n8veUUaUWn9YTon4mExwlG2maP3UlbsKRrNaSdkIPv44rYWqcXZ4fPRKsQ5iODyJa\nJ4238T5MzaLJv+2Q9vU4eS/7MFdG9Aw9rz71z7HihYPRPB7/2ISC8l1n79aJHKNv\n/MyVko6LIu1l4HJUNlKslJ8/RVQpfnJzBHoj0VCYfZx5GlSrWG2qaWQO4bBhZV3T\nqy/mNM7ft6RkkyklV69W5+e3EfKTBoTKDDN/3QIDAQABAoIBADatFiyW8WEm2beV\n9rnEdPOx5bDkWYv2kucs2t4HgVifICU60hndcwKR410tlKkSIPSPGcb1RVP3ccE/\nVAcBhv3nBP66HRKo2TEsbn5EcS4O7kiSYJknmrLDerQp0xyMlwe5YUbwvVSHLs+w\njWeQroxaOIcBjoKVlJ/jqaIhX6otuGXjp9HZwecM5B8GtbAv1jwutzg+Eah1Gqnp\n4W7fdozHFEGe56DGnrtb+T840UXpl4Y0L7p0CmMinyT7Byzb/j24yuFns9tt83nP\nzpNaVBLWRfM37J16vhEYz7RRtjT7arE72dnZKH4TC5g1eVYGXRzst7oHZjd65Ifx\nkFavhSECgYEA8fdM4t6YZnYrdsFvVonFSYv3+AavrRdTuZJsZAeoWD7BANhLfHHn\nC6N7T0e6QqjQTpUHWXmQVkBYYb9X2VK6m432V86+leeLUUR8YqDKT5WMottQm+H9\niQVK1FJ1J6lnBx2mXTJj0bn6/RW2hhsgaVDZpFEEs07TvEDtZHMyc/kCgYEAzLdb\noN+Sm2mIw2MLHdocvoWraQUuCr3dNC1Zhkmk8dwCKR8RvvlFVATkbCzFq5PtVwz7\n9LDwgoPy62xRfjvdlTfAuVLJp8njWIpsuIYtmr0YOzqtEwQfn+ai0XwImBVxPQU0\nH4oFdQxstdASUH5CR8ebln1MJ2a1OedHPlXIHAUCgYEAyxmLffrd7VNPVFU1gWwP\nH5bPQ29JUn78Fg4j0SrkUX4LPwxPAFwTVZ+Zx4grffx5LRzGmIIDd4J3LUURFifs\n3tkgZ7/wFZ/PPx2/UoIojvi2nZR9avscd0Dr+KBmGi6FfmGS3TOIuefkFz98f8CR\nShVFOjmPOnr2G1Rcby6KsPECgYBk4D1winrNxjU0Qovpy966K1gJyhmkBWcJHQeu\nWn/DBmyyIrM17dMx0a9VdsJ5B82+RZGqQ75gMfDz/U4y7AEGVJDNQXRJD/zNVni4\nfLXgOCnGleVPJ4sF2jqFC5+YgYhpTzUeDX8e7F5tQPilXXH/uOZ8Q4XRLJVE0SiU\nGOUgmQKBgQDhY4tA+QYjXTOdo4QAXNk718Y7h4oSFawpNpyx9JiQLKfEvwuIWgQk\n2rsWw5e7vlvfL9NlGkSsZcTfRXTSCmoO5gVUqjIREtve1MPAfETOeHF2BAGRfysP\npopf1RLgKUI826p8gNVqTR0oQR1C0bJ2z1jMzsq/pR6S1TDr+xA0qw==\n-----END RSA PRIVATE KEY-----",
+      "pm_type": "pxe_ssh",
+      "mac": [
+        "52:54:00:9f:85:a0"
+      ],
+      "cpu": "1",
+      "memory": "1024",
+      "disk": "10"
+    },
+    {
+      "pm_user": "stack",
+      "arch": "x86_64",
+      "name": "overcloud-compute3",
+      "pm_addr": "192.168.122.1",
+      "pm_password": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAwX5fp7XEQWqpUWcrjfin4FsItLsYYBqGlV/6Zlr6g4ZOqVNH\nNw2n8ZSd9rIoJyG+bh6xcOmDTNs2IQ2wb4z1qnWfuomnLhK3FKIsoeNETz0XZYQg\n8veUUaUWn9YTon4mExwlG2maP3UlbsKRrNaSdkIPv44rYWqcXZ4fPRKsQ5iODyJa\nJ4238T5MzaLJv+2Q9vU4eS/7MFdG9Aw9rz71z7HihYPRPB7/2ISC8l1n79aJHKNv\n/MyVko6LIu1l4HJUNlKslJ8/RVQpfnJzBHoj0VCYfZx5GlSrWG2qaWQO4bBhZV3T\nqy/mNM7ft6RkkyklV69W5+e3EfKTBoTKDDN/3QIDAQABAoIBADatFiyW8WEm2beV\n9rnEdPOx5bDkWYv2kucs2t4HgVifICU60hndcwKR410tlKkSIPSPGcb1RVP3ccE/\nVAcBhv3nBP66HRKo2TEsbn5EcS4O7kiSYJknmrLDerQp0xyMlwe5YUbwvVSHLs+w\njWeQroxaOIcBjoKVlJ/jqaIhX6otuGXjp9HZwecM5B8GtbAv1jwutzg+Eah1Gqnp\n4W7fdozHFEGe56DGnrtb+T840UXpl4Y0L7p0CmMinyT7Byzb/j24yuFns9tt83nP\nzpNaVBLWRfM37J16vhEYz7RRtjT7arE72dnZKH4TC5g1eVYGXRzst7oHZjd65Ifx\nkFavhSECgYEA8fdM4t6YZnYrdsFvVonFSYv3+AavrRdTuZJsZAeoWD7BANhLfHHn\nC6N7T0e6QqjQTpUHWXmQVkBYYb9X2VK6m432V86+leeLUUR8YqDKT5WMottQm+H9\niQVK1FJ1J6lnBx2mXTJj0bn6/RW2hhsgaVDZpFEEs07TvEDtZHMyc/kCgYEAzLdb\noN+Sm2mIw2MLHdocvoWraQUuCr3dNC1Zhkmk8dwCKR8RvvlFVATkbCzFq5PtVwz7\n9LDwgoPy62xRfjvdlTfAuVLJp8njWIpsuIYtmr0YOzqtEwQfn+ai0XwImBVxPQU0\nH4oFdQxstdASUH5CR8ebln1MJ2a1OedHPlXIHAUCgYEAyxmLffrd7VNPVFU1gWwP\nH5bPQ29JUn78Fg4j0SrkUX4LPwxPAFwTVZ+Zx4grffx5LRzGmIIDd4J3LUURFifs\n3tkgZ7/wFZ/PPx2/UoIojvi2nZR9avscd0Dr+KBmGi6FfmGS3TOIuefkFz98f8CR\nShVFOjmPOnr2G1Rcby6KsPECgYBk4D1winrNxjU0Qovpy966K1gJyhmkBWcJHQeu\nWn/DBmyyIrM17dMx0a9VdsJ5B82+RZGqQ75gMfDz/U4y7AEGVJDNQXRJD/zNVni4\nfLXgOCnGleVPJ4sF2jqFC5+YgYhpTzUeDX8e7F5tQPilXXH/uOZ8Q4XRLJVE0SiU\nGOUgmQKBgQDhY4tA+QYjXTOdo4QAXNk718Y7h4oSFawpNpyx9JiQLKfEvwuIWgQk\n2rsWw5e7vlvfL9NlGkSsZcTfRXTSCmoO5gVUqjIREtve1MPAfETOeHF2BAGRfysP\npopf1RLgKUI826p8gNVqTR0oQR1C0bJ2z1jMzsq/pR6S1TDr+xA0qw==\n-----END RSA PRIVATE KEY-----",
+      "pm_type": "pxe_ssh",
+      "mac": [
+        "52:54:00:78:88:6d"
+      ],
+      "cpu": "1",
+      "memory": "1024",
+      "disk": "10"
+    },
+    {
+      "pm_user": "stack",
+      "arch": "x86_64",
+      "name": "overcloud-compute4",
+      "pm_addr": "192.168.122.1",
+      "pm_password": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAwX5fp7XEQWqpUWcrjfin4FsItLsYYBqGlV/6Zlr6g4ZOqVNH\nNw2n8ZSd9rIoJyG+bh6xcOmDTNs2IQ2wb4z1qnWfuomnLhK3FKIsoeNETz0XZYQg\n8veUUaUWn9YTon4mExwlG2maP3UlbsKRrNaSdkIPv44rYWqcXZ4fPRKsQ5iODyJa\nJ4238T5MzaLJv+2Q9vU4eS/7MFdG9Aw9rz71z7HihYPRPB7/2ISC8l1n79aJHKNv\n/MyVko6LIu1l4HJUNlKslJ8/RVQpfnJzBHoj0VCYfZx5GlSrWG2qaWQO4bBhZV3T\nqy/mNM7ft6RkkyklV69W5+e3EfKTBoTKDDN/3QIDAQABAoIBADatFiyW8WEm2beV\n9rnEdPOx5bDkWYv2kucs2t4HgVifICU60hndcwKR410tlKkSIPSPGcb1RVP3ccE/\nVAcBhv3nBP66HRKo2TEsbn5EcS4O7kiSYJknmrLDerQp0xyMlwe5YUbwvVSHLs+w\njWeQroxaOIcBjoKVlJ/jqaIhX6otuGXjp9HZwecM5B8GtbAv1jwutzg+Eah1Gqnp\n4W7fdozHFEGe56DGnrtb+T840UXpl4Y0L7p0CmMinyT7Byzb/j24yuFns9tt83nP\nzpNaVBLWRfM37J16vhEYz7RRtjT7arE72dnZKH4TC5g1eVYGXRzst7oHZjd65Ifx\nkFavhSECgYEA8fdM4t6YZnYrdsFvVonFSYv3+AavrRdTuZJsZAeoWD7BANhLfHHn\nC6N7T0e6QqjQTpUHWXmQVkBYYb9X2VK6m432V86+leeLUUR8YqDKT5WMottQm+H9\niQVK1FJ1J6lnBx2mXTJj0bn6/RW2hhsgaVDZpFEEs07TvEDtZHMyc/kCgYEAzLdb\noN+Sm2mIw2MLHdocvoWraQUuCr3dNC1Zhkmk8dwCKR8RvvlFVATkbCzFq5PtVwz7\n9LDwgoPy62xRfjvdlTfAuVLJp8njWIpsuIYtmr0YOzqtEwQfn+ai0XwImBVxPQU0\nH4oFdQxstdASUH5CR8ebln1MJ2a1OedHPlXIHAUCgYEAyxmLffrd7VNPVFU1gWwP\nH5bPQ29JUn78Fg4j0SrkUX4LPwxPAFwTVZ+Zx4grffx5LRzGmIIDd4J3LUURFifs\n3tkgZ7/wFZ/PPx2/UoIojvi2nZR9avscd0Dr+KBmGi6FfmGS3TOIuefkFz98f8CR\nShVFOjmPOnr2G1Rcby6KsPECgYBk4D1winrNxjU0Qovpy966K1gJyhmkBWcJHQeu\nWn/DBmyyIrM17dMx0a9VdsJ5B82+RZGqQ75gMfDz/U4y7AEGVJDNQXRJD/zNVni4\nfLXgOCnGleVPJ4sF2jqFC5+YgYhpTzUeDX8e7F5tQPilXXH/uOZ8Q4XRLJVE0SiU\nGOUgmQKBgQDhY4tA+QYjXTOdo4QAXNk718Y7h4oSFawpNpyx9JiQLKfEvwuIWgQk\n2rsWw5e7vlvfL9NlGkSsZcTfRXTSCmoO5gVUqjIREtve1MPAfETOeHF2BAGRfysP\npopf1RLgKUI826p8gNVqTR0oQR1C0bJ2z1jMzsq/pR6S1TDr+xA0qw==\n-----END RSA PRIVATE KEY-----",
+      "pm_type": "pxe_ssh",
+      "mac": [
+        "52:54:00:99:cb:2f"
+      ],
+      "cpu": "1",
+      "memory": "1024",
+      "disk": "10"
+    },
+    {
+      "pm_user": "stack",
+      "arch": "x86_64",
+      "name": "overcloud-compute5",
+      "pm_addr": "192.168.122.1",
+      "pm_password": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAwX5fp7XEQWqpUWcrjfin4FsItLsYYBqGlV/6Zlr6g4ZOqVNH\nNw2n8ZSd9rIoJyG+bh6xcOmDTNs2IQ2wb4z1qnWfuomnLhK3FKIsoeNETz0XZYQg\n8veUUaUWn9YTon4mExwlG2maP3UlbsKRrNaSdkIPv44rYWqcXZ4fPRKsQ5iODyJa\nJ4238T5MzaLJv+2Q9vU4eS/7MFdG9Aw9rz71z7HihYPRPB7/2ISC8l1n79aJHKNv\n/MyVko6LIu1l4HJUNlKslJ8/RVQpfnJzBHoj0VCYfZx5GlSrWG2qaWQO4bBhZV3T\nqy/mNM7ft6RkkyklV69W5+e3EfKTBoTKDDN/3QIDAQABAoIBADatFiyW8WEm2beV\n9rnEdPOx5bDkWYv2kucs2t4HgVifICU60hndcwKR410tlKkSIPSPGcb1RVP3ccE/\nVAcBhv3nBP66HRKo2TEsbn5EcS4O7kiSYJknmrLDerQp0xyMlwe5YUbwvVSHLs+w\njWeQroxaOIcBjoKVlJ/jqaIhX6otuGXjp9HZwecM5B8GtbAv1jwutzg+Eah1Gqnp\n4W7fdozHFEGe56DGnrtb+T840UXpl4Y0L7p0CmMinyT7Byzb/j24yuFns9tt83nP\nzpNaVBLWRfM37J16vhEYz7RRtjT7arE72dnZKH4TC5g1eVYGXRzst7oHZjd65Ifx\nkFavhSECgYEA8fdM4t6YZnYrdsFvVonFSYv3+AavrRdTuZJsZAeoWD7BANhLfHHn\nC6N7T0e6QqjQTpUHWXmQVkBYYb9X2VK6m432V86+leeLUUR8YqDKT5WMottQm+H9\niQVK1FJ1J6lnBx2mXTJj0bn6/RW2hhsgaVDZpFEEs07TvEDtZHMyc/kCgYEAzLdb\noN+Sm2mIw2MLHdocvoWraQUuCr3dNC1Zhkmk8dwCKR8RvvlFVATkbCzFq5PtVwz7\n9LDwgoPy62xRfjvdlTfAuVLJp8njWIpsuIYtmr0YOzqtEwQfn+ai0XwImBVxPQU0\nH4oFdQxstdASUH5CR8ebln1MJ2a1OedHPlXIHAUCgYEAyxmLffrd7VNPVFU1gWwP\nH5bPQ29JUn78Fg4j0SrkUX4LPwxPAFwTVZ+Zx4grffx5LRzGmIIDd4J3LUURFifs\n3tkgZ7/wFZ/PPx2/UoIojvi2nZR9avscd0Dr+KBmGi6FfmGS3TOIuefkFz98f8CR\nShVFOjmPOnr2G1Rcby6KsPECgYBk4D1winrNxjU0Qovpy966K1gJyhmkBWcJHQeu\nWn/DBmyyIrM17dMx0a9VdsJ5B82+RZGqQ75gMfDz/U4y7AEGVJDNQXRJD/zNVni4\nfLXgOCnGleVPJ4sF2jqFC5+YgYhpTzUeDX8e7F5tQPilXXH/uOZ8Q4XRLJVE0SiU\nGOUgmQKBgQDhY4tA+QYjXTOdo4QAXNk718Y7h4oSFawpNpyx9JiQLKfEvwuIWgQk\n2rsWw5e7vlvfL9NlGkSsZcTfRXTSCmoO5gVUqjIREtve1MPAfETOeHF2BAGRfysP\npopf1RLgKUI826p8gNVqTR0oQR1C0bJ2z1jMzsq/pR6S1TDr+xA0qw==\n-----END RSA PRIVATE KEY-----",
+      "pm_type": "pxe_ssh",
+      "mac": [
+        "52:54:00:ca:7d:7e"
+      ],
+      "cpu": "1",
+      "memory": "1024",
+      "disk": "10"
+    },
+    {
+      "pm_user": "stack",
+      "arch": "x86_64",
+      "name": "overcloud-controller1",
+      "pm_addr": "192.168.122.1",
+      "pm_password": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAwX5fp7XEQWqpUWcrjfin4FsItLsYYBqGlV/6Zlr6g4ZOqVNH\nNw2n8ZSd9rIoJyG+bh6xcOmDTNs2IQ2wb4z1qnWfuomnLhK3FKIsoeNETz0XZYQg\n8veUUaUWn9YTon4mExwlG2maP3UlbsKRrNaSdkIPv44rYWqcXZ4fPRKsQ5iODyJa\nJ4238T5MzaLJv+2Q9vU4eS/7MFdG9Aw9rz71z7HihYPRPB7/2ISC8l1n79aJHKNv\n/MyVko6LIu1l4HJUNlKslJ8/RVQpfnJzBHoj0VCYfZx5GlSrWG2qaWQO4bBhZV3T\nqy/mNM7ft6RkkyklV69W5+e3EfKTBoTKDDN/3QIDAQABAoIBADatFiyW8WEm2beV\n9rnEdPOx5bDkWYv2kucs2t4HgVifICU60hndcwKR410tlKkSIPSPGcb1RVP3ccE/\nVAcBhv3nBP66HRKo2TEsbn5EcS4O7kiSYJknmrLDerQp0xyMlwe5YUbwvVSHLs+w\njWeQroxaOIcBjoKVlJ/jqaIhX6otuGXjp9HZwecM5B8GtbAv1jwutzg+Eah1Gqnp\n4W7fdozHFEGe56DGnrtb+T840UXpl4Y0L7p0CmMinyT7Byzb/j24yuFns9tt83nP\nzpNaVBLWRfM37J16vhEYz7RRtjT7arE72dnZKH4TC5g1eVYGXRzst7oHZjd65Ifx\nkFavhSECgYEA8fdM4t6YZnYrdsFvVonFSYv3+AavrRdTuZJsZAeoWD7BANhLfHHn\nC6N7T0e6QqjQTpUHWXmQVkBYYb9X2VK6m432V86+leeLUUR8YqDKT5WMottQm+H9\niQVK1FJ1J6lnBx2mXTJj0bn6/RW2hhsgaVDZpFEEs07TvEDtZHMyc/kCgYEAzLdb\noN+Sm2mIw2MLHdocvoWraQUuCr3dNC1Zhkmk8dwCKR8RvvlFVATkbCzFq5PtVwz7\n9LDwgoPy62xRfjvdlTfAuVLJp8njWIpsuIYtmr0YOzqtEwQfn+ai0XwImBVxPQU0\nH4oFdQxstdASUH5CR8ebln1MJ2a1OedHPlXIHAUCgYEAyxmLffrd7VNPVFU1gWwP\nH5bPQ29JUn78Fg4j0SrkUX4LPwxPAFwTVZ+Zx4grffx5LRzGmIIDd4J3LUURFifs\n3tkgZ7/wFZ/PPx2/UoIojvi2nZR9avscd0Dr+KBmGi6FfmGS3TOIuefkFz98f8CR\nShVFOjmPOnr2G1Rcby6KsPECgYBk4D1winrNxjU0Qovpy966K1gJyhmkBWcJHQeu\nWn/DBmyyIrM17dMx0a9VdsJ5B82+RZGqQ75gMfDz/U4y7AEGVJDNQXRJD/zNVni4\nfLXgOCnGleVPJ4sF2jqFC5+YgYhpTzUeDX8e7F5tQPilXXH/uOZ8Q4XRLJVE0SiU\nGOUgmQKBgQDhY4tA+QYjXTOdo4QAXNk718Y7h4oSFawpNpyx9JiQLKfEvwuIWgQk\n2rsWw5e7vlvfL9NlGkSsZcTfRXTSCmoO5gVUqjIREtve1MPAfETOeHF2BAGRfysP\npopf1RLgKUI826p8gNVqTR0oQR1C0bJ2z1jMzsq/pR6S1TDr+xA0qw==\n-----END RSA PRIVATE KEY-----",
+      "pm_type": "pxe_ssh",
+      "mac": [
+        "52:54:00:09:ca:f2"
+      ],
+      "cpu": "1",
+      "memory": "1024",
+      "disk": "10"
+    },
+    {
+      "pm_user": "stack",
+      "arch": "x86_64",
+      "name": "overcloud-controller2",
+      "pm_addr": "192.168.122.1",
+      "pm_password": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAwX5fp7XEQWqpUWcrjfin4FsItLsYYBqGlV/6Zlr6g4ZOqVNH\nNw2n8ZSd9rIoJyG+bh6xcOmDTNs2IQ2wb4z1qnWfuomnLhK3FKIsoeNETz0XZYQg\n8veUUaUWn9YTon4mExwlG2maP3UlbsKRrNaSdkIPv44rYWqcXZ4fPRKsQ5iODyJa\nJ4238T5MzaLJv+2Q9vU4eS/7MFdG9Aw9rz71z7HihYPRPB7/2ISC8l1n79aJHKNv\n/MyVko6LIu1l4HJUNlKslJ8/RVQpfnJzBHoj0VCYfZx5GlSrWG2qaWQO4bBhZV3T\nqy/mNM7ft6RkkyklV69W5+e3EfKTBoTKDDN/3QIDAQABAoIBADatFiyW8WEm2beV\n9rnEdPOx5bDkWYv2kucs2t4HgVifICU60hndcwKR410tlKkSIPSPGcb1RVP3ccE/\nVAcBhv3nBP66HRKo2TEsbn5EcS4O7kiSYJknmrLDerQp0xyMlwe5YUbwvVSHLs+w\njWeQroxaOIcBjoKVlJ/jqaIhX6otuGXjp9HZwecM5B8GtbAv1jwutzg+Eah1Gqnp\n4W7fdozHFEGe56DGnrtb+T840UXpl4Y0L7p0CmMinyT7Byzb/j24yuFns9tt83nP\nzpNaVBLWRfM37J16vhEYz7RRtjT7arE72dnZKH4TC5g1eVYGXRzst7oHZjd65Ifx\nkFavhSECgYEA8fdM4t6YZnYrdsFvVonFSYv3+AavrRdTuZJsZAeoWD7BANhLfHHn\nC6N7T0e6QqjQTpUHWXmQVkBYYb9X2VK6m432V86+leeLUUR8YqDKT5WMottQm+H9\niQVK1FJ1J6lnBx2mXTJj0bn6/RW2hhsgaVDZpFEEs07TvEDtZHMyc/kCgYEAzLdb\noN+Sm2mIw2MLHdocvoWraQUuCr3dNC1Zhkmk8dwCKR8RvvlFVATkbCzFq5PtVwz7\n9LDwgoPy62xRfjvdlTfAuVLJp8njWIpsuIYtmr0YOzqtEwQfn+ai0XwImBVxPQU0\nH4oFdQxstdASUH5CR8ebln1MJ2a1OedHPlXIHAUCgYEAyxmLffrd7VNPVFU1gWwP\nH5bPQ29JUn78Fg4j0SrkUX4LPwxPAFwTVZ+Zx4grffx5LRzGmIIDd4J3LUURFifs\n3tkgZ7/wFZ/PPx2/UoIojvi2nZR9avscd0Dr+KBmGi6FfmGS3TOIuefkFz98f8CR\nShVFOjmPOnr2G1Rcby6KsPECgYBk4D1winrNxjU0Qovpy966K1gJyhmkBWcJHQeu\nWn/DBmyyIrM17dMx0a9VdsJ5B82+RZGqQ75gMfDz/U4y7AEGVJDNQXRJD/zNVni4\nfLXgOCnGleVPJ4sF2jqFC5+YgYhpTzUeDX8e7F5tQPilXXH/uOZ8Q4XRLJVE0SiU\nGOUgmQKBgQDhY4tA+QYjXTOdo4QAXNk718Y7h4oSFawpNpyx9JiQLKfEvwuIWgQk\n2rsWw5e7vlvfL9NlGkSsZcTfRXTSCmoO5gVUqjIREtve1MPAfETOeHF2BAGRfysP\npopf1RLgKUI826p8gNVqTR0oQR1C0bJ2z1jMzsq/pR6S1TDr+xA0qw==\n-----END RSA PRIVATE KEY-----",
+      "pm_type": "pxe_ssh",
+      "mac": [
+        "52:54:00:88:58:93"
+      ],
+      "cpu": "1",
+      "memory": "1024",
+      "disk": "10"
+    },
+    {
+      "pm_user": "stack",
+      "arch": "x86_64",
+      "name": "overcloud-controller3",
+      "pm_addr": "192.168.122.1",
+      "pm_password": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAwX5fp7XEQWqpUWcrjfin4FsItLsYYBqGlV/6Zlr6g4ZOqVNH\nNw2n8ZSd9rIoJyG+bh6xcOmDTNs2IQ2wb4z1qnWfuomnLhK3FKIsoeNETz0XZYQg\n8veUUaUWn9YTon4mExwlG2maP3UlbsKRrNaSdkIPv44rYWqcXZ4fPRKsQ5iODyJa\nJ4238T5MzaLJv+2Q9vU4eS/7MFdG9Aw9rz71z7HihYPRPB7/2ISC8l1n79aJHKNv\n/MyVko6LIu1l4HJUNlKslJ8/RVQpfnJzBHoj0VCYfZx5GlSrWG2qaWQO4bBhZV3T\nqy/mNM7ft6RkkyklV69W5+e3EfKTBoTKDDN/3QIDAQABAoIBADatFiyW8WEm2beV\n9rnEdPOx5bDkWYv2kucs2t4HgVifICU60hndcwKR410tlKkSIPSPGcb1RVP3ccE/\nVAcBhv3nBP66HRKo2TEsbn5EcS4O7kiSYJknmrLDerQp0xyMlwe5YUbwvVSHLs+w\njWeQroxaOIcBjoKVlJ/jqaIhX6otuGXjp9HZwecM5B8GtbAv1jwutzg+Eah1Gqnp\n4W7fdozHFEGe56DGnrtb+T840UXpl4Y0L7p0CmMinyT7Byzb/j24yuFns9tt83nP\nzpNaVBLWRfM37J16vhEYz7RRtjT7arE72dnZKH4TC5g1eVYGXRzst7oHZjd65Ifx\nkFavhSECgYEA8fdM4t6YZnYrdsFvVonFSYv3+AavrRdTuZJsZAeoWD7BANhLfHHn\nC6N7T0e6QqjQTpUHWXmQVkBYYb9X2VK6m432V86+leeLUUR8YqDKT5WMottQm+H9\niQVK1FJ1J6lnBx2mXTJj0bn6/RW2hhsgaVDZpFEEs07TvEDtZHMyc/kCgYEAzLdb\noN+Sm2mIw2MLHdocvoWraQUuCr3dNC1Zhkmk8dwCKR8RvvlFVATkbCzFq5PtVwz7\n9LDwgoPy62xRfjvdlTfAuVLJp8njWIpsuIYtmr0YOzqtEwQfn+ai0XwImBVxPQU0\nH4oFdQxstdASUH5CR8ebln1MJ2a1OedHPlXIHAUCgYEAyxmLffrd7VNPVFU1gWwP\nH5bPQ29JUn78Fg4j0SrkUX4LPwxPAFwTVZ+Zx4grffx5LRzGmIIDd4J3LUURFifs\n3tkgZ7/wFZ/PPx2/UoIojvi2nZR9avscd0Dr+KBmGi6FfmGS3TOIuefkFz98f8CR\nShVFOjmPOnr2G1Rcby6KsPECgYBk4D1winrNxjU0Qovpy966K1gJyhmkBWcJHQeu\nWn/DBmyyIrM17dMx0a9VdsJ5B82+RZGqQ75gMfDz/U4y7AEGVJDNQXRJD/zNVni4\nfLXgOCnGleVPJ4sF2jqFC5+YgYhpTzUeDX8e7F5tQPilXXH/uOZ8Q4XRLJVE0SiU\nGOUgmQKBgQDhY4tA+QYjXTOdo4QAXNk718Y7h4oSFawpNpyx9JiQLKfEvwuIWgQk\n2rsWw5e7vlvfL9NlGkSsZcTfRXTSCmoO5gVUqjIREtve1MPAfETOeHF2BAGRfysP\npopf1RLgKUI826p8gNVqTR0oQR1C0bJ2z1jMzsq/pR6S1TDr+xA0qw==\n-----END RSA PRIVATE KEY-----",
+      "pm_type": "pxe_ssh",
+      "mac": [
+        "52:54:00:a6:34:d5"
+      ],
+      "cpu": "1",
+      "memory": "1024",
+      "disk": "10"
+    }
+  ],
+  "arch": "x86_64",
+  "host-ip": "192.168.122.1",
+  "power_manager": "nova.virt.baremetal.virtual_power_driver.VirtualPowerManager",
+  "ssh-key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAwX5fp7XEQWqpUWcrjfin4FsItLsYYBqGlV/6Zlr6g4ZOqVNH\nNw2n8ZSd9rIoJyG+bh6xcOmDTNs2IQ2wb4z1qnWfuomnLhK3FKIsoeNETz0XZYQg\n8veUUaUWn9YTon4mExwlG2maP3UlbsKRrNaSdkIPv44rYWqcXZ4fPRKsQ5iODyJa\nJ4238T5MzaLJv+2Q9vU4eS/7MFdG9Aw9rz71z7HihYPRPB7/2ISC8l1n79aJHKNv\n/MyVko6LIu1l4HJUNlKslJ8/RVQpfnJzBHoj0VCYfZx5GlSrWG2qaWQO4bBhZV3T\nqy/mNM7ft6RkkyklV69W5+e3EfKTBoTKDDN/3QIDAQABAoIBADatFiyW8WEm2beV\n9rnEdPOx5bDkWYv2kucs2t4HgVifICU60hndcwKR410tlKkSIPSPGcb1RVP3ccE/\nVAcBhv3nBP66HRKo2TEsbn5EcS4O7kiSYJknmrLDerQp0xyMlwe5YUbwvVSHLs+w\njWeQroxaOIcBjoKVlJ/jqaIhX6otuGXjp9HZwecM5B8GtbAv1jwutzg+Eah1Gqnp\n4W7fdozHFEGe56DGnrtb+T840UXpl4Y0L7p0CmMinyT7Byzb/j24yuFns9tt83nP\nzpNaVBLWRfM37J16vhEYz7RRtjT7arE72dnZKH4TC5g1eVYGXRzst7oHZjd65Ifx\nkFavhSECgYEA8fdM4t6YZnYrdsFvVonFSYv3+AavrRdTuZJsZAeoWD7BANhLfHHn\nC6N7T0e6QqjQTpUHWXmQVkBYYb9X2VK6m432V86+leeLUUR8YqDKT5WMottQm+H9\niQVK1FJ1J6lnBx2mXTJj0bn6/RW2hhsgaVDZpFEEs07TvEDtZHMyc/kCgYEAzLdb\noN+Sm2mIw2MLHdocvoWraQUuCr3dNC1Zhkmk8dwCKR8RvvlFVATkbCzFq5PtVwz7\n9LDwgoPy62xRfjvdlTfAuVLJp8njWIpsuIYtmr0YOzqtEwQfn+ai0XwImBVxPQU0\nH4oFdQxstdASUH5CR8ebln1MJ2a1OedHPlXIHAUCgYEAyxmLffrd7VNPVFU1gWwP\nH5bPQ29JUn78Fg4j0SrkUX4LPwxPAFwTVZ+Zx4grffx5LRzGmIIDd4J3LUURFifs\n3tkgZ7/wFZ/PPx2/UoIojvi2nZR9avscd0Dr+KBmGi6FfmGS3TOIuefkFz98f8CR\nShVFOjmPOnr2G1Rcby6KsPECgYBk4D1winrNxjU0Qovpy966K1gJyhmkBWcJHQeu\nWn/DBmyyIrM17dMx0a9VdsJ5B82+RZGqQ75gMfDz/U4y7AEGVJDNQXRJD/zNVni4\nfLXgOCnGleVPJ4sF2jqFC5+YgYhpTzUeDX8e7F5tQPilXXH/uOZ8Q4XRLJVE0SiU\nGOUgmQKBgQDhY4tA+QYjXTOdo4QAXNk718Y7h4oSFawpNpyx9JiQLKfEvwuIWgQk\n2rsWw5e7vlvfL9NlGkSsZcTfRXTSCmoO5gVUqjIREtve1MPAfETOeHF2BAGRfysP\npopf1RLgKUI826p8gNVqTR0oQR1C0bJ2z1jMzsq/pR6S1TDr+xA0qw==\n-----END RSA PRIVATE KEY-----",
+  "ssh-user": "stack"
+}
