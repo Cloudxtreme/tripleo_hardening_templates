@@ -1,5 +1,5 @@
 #!/bin/bash
-DIR=/home/stack/templates
+export DIR=/home/stack/templates
 
 openstack overcloud deploy --templates \
 -t 90 --ntp-server 10.5.26.10 \
@@ -11,6 +11,6 @@ openstack overcloud deploy --templates \
 -e $DIR/enable-tls.yaml \
 -e $DIR/inject-trust-anchor.yaml \
 -e $DIR/hostname.yaml \
--e $DIR/rhel-registration/environment-rhel-registration.yaml \ 
+-e $DIR/rhel-registration/environment-rhel-registration.yaml \
 -e $DIR/rhel-registration/rhel-registration-resource-registry.yaml \
--e $DIR/harden.yaml
+-e $DIR/post-deploy.yaml

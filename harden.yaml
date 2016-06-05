@@ -15,7 +15,6 @@ resources:
       group: script
       config: {get_file: /home/stack/templates/hardening/hardening.sh}
 
-
   ExtraDeployments:
     type: OS::Heat::SoftwareDeployments
     properties:

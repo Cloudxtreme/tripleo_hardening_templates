@@ -1,42 +1,47 @@
 #!/bin/bash
 
-#if [ $( whoami ) != "root" ] ; then
+if [ $( whoami ) != "root" ] ; then
 
-#   echo
-#   echo "This script must be run as root"
-#   echo "Change user and run it again"
-#   echo
-#   exit 11
-#
-#fi
+   echo
+   echo "This script must be run as root"
+   echo "Change user and run it again"
+   echo
+   exit 11
+
+fi
 
 LOG="/tmp/hardening-$(date +%Y%m%d.log)"
+echo $LOG
 
 HOSTTYPE=$(hostname | cut -d- -f2)
+echo $HOSTTYPE
 
 COPYEXT=$(date +%Y%m%d-%H%M%S)
+echo $COPYEXT
 
 LOCALIP=$(grep "^IPADDR" /etc/sysconfig/network-scripts/ifcfg-br-ex | sed -e 's/IPADDR=//')
+echo $LOCALIP
 
 INTERNALIP=$(grep "^IPADDR" /etc/sysconfig/network-scripts/ifcfg-vlan101 | sed -e 's/IPADDR=//')
+echo $INTERNALIP
 
-#if [ "$HOSTTYPE" = "control" ] ; then
-#
-#   if [ ! -f /etc/openstack-dashboard/.dsk ]; then
-#
-#      echo "I did not find /etc/openstack-dashboard/.dsk file"
-#      echo 
-#      echo "Press ENTER if this is the first controller where you are running this script" 
-#      echo "and I will generate this file for you"
-#      echo
-#      echo "or copy /etc/openstack-dashboard/.dsk from first controller manually "
-#      echo "and put it into /etc/openstack-dashboard directory"
-#      echo
-#      read -p "Press ENTER to continue or CTRL+C to cancel" 
-#
-#   fi
-#
-#fi
+if [ "$HOSTTYPE" = "control" ] ; then
+
+   if [ ! -f /etc/openstack-dashboard/.dsk ]; then
+
+      echo "I did not find /etc/openstack-dashboard/.dsk file"
+      echo 
+      echo "Press ENTER if this is the first controller where you are running this script" 
+      echo "and I will generate this file for you"
+      echo
+      echo "or copy /etc/openstack-dashboard/.dsk from first controller manually "
+      echo "and put it into /etc/openstack-dashboard directory"
+      echo
+      read -p "Press ENTER to continue or CTRL+C to cancel" 
+
+   fi
+
+fi
 
 
 #-----------------------------------------------------------------------
@@ -44,7 +49,6 @@ INTERNALIP=$(grep "^IPADDR" /etc/sysconfig/network-scripts/ifcfg-vlan101 | sed -
 fheader()
 {
    echo -e "\n##########" >> $LOG
-   echo $ID >> $LOG
 }
 
 #-----------------------------------------------------------------------
@@ -52,36 +56,20 @@ fheader()
 backup()
 {
    fheader
-   BACKUPFILE="/root/backup-${COPYEXT}.tar.gz"
-   echo "Backing up all configurations to ${BACKUPFILE}" | tee -a $LOG
-
-   tar cpzf ${BACKUPFILE} /etc
-
-   echo -e "\n/etc backed up to ${BACKUPFILE}\n" | tee -a $LOG
-
-   touch ~/.hardening-${COPYEXT}
+   ls /root/backup-*.tar.gz | tee -a $LOG
 }
 
 #-----------------------------------------------------------------------
 
 keystone-ssl-certs()
 {
+   
+   fheader
+   echo "Checking permissions on certificates private keys" | tee -a $LOG
+   
    if [ "$HOSTTYPE" = "control" ]; then
 
-      fheader
-
-      echo "Fixing permissions on certificates private keys" | tee -a $LOG
-
-      echo -e "\n- Original permissions on /etc/keystone/ssl pem files" >> $LOG
-      ls -l /etc/keystone/ssl/* 2>&1 >> $LOG
-
-      echo -e "\nNot changing permissions on public cert pem files" | tee -a $LOG
-      echo "Changing permissions on /etc/keystone/ssl/private pem files" | tee -a $LOG
-
-      chmod 640 /etc/keystone/ssl/private/*pem
-
-      echo -e "\nFinal permissions on /etc/keystone/ssl pem files" >> $LOG
-      ls -l /etc/keystone/ssl/* 2>&1 >> $LOG
+      ls -l /etc/keystone/ssl/* 2>&1 | grep -e '-rw-r--r--'
 
    else
 
@@ -99,20 +87,10 @@ cinder()
 
       fheader
 
-      echo "Cinder - configuring max request body size" | tee -a $LOG
+      echo "Cinder - checking max request body size" | tee -a $LOG
 
-      cp -a /etc/cinder/cinder.conf{,.$COPYEXT}
-
-      echo -e "\n- Original configuration: " >> $LOG
-      grep "osapi_max_request_body_size" /etc/cinder/cinder.conf >> $LOG
-      grep "nas_secure_file_permissions" /etc/cinder/cinder.conf >> $LOG
-
-      openstack-config --set /etc/cinder/cinder.conf DEFAULT osapi_max_request_body_size 114688
-      openstack-config --set /etc/cinder/cinder.conf DEFAULT nas_secure_file_permissions auto
-
-      echo -e "\n- New configuration:" >> $LOG
-      grep "osapi_max_request_body_size" /etc/cinder/cinder.conf >> $LOG
-      grep "nas_secure_file_permissions" /etc/cinder/cinder.conf >> $LOG
+      openstack-config --get /etc/cinder/cinder.conf DEFAULT osapi_max_request_body_size | grep 114688
+      openstack-config --get /etc/cinder/cinder.conf DEFAULT nas_secure_file_permissions | grep auto
 
    fi
 
@@ -195,17 +173,8 @@ neutron()
 {
    fheader
 
-   echo "Settings on neutron.conf " | tee -a $LOG
+   openstack-config --get /etc/neutron/neutron.conf quotas quota_driver | grep neutron.db.quota_db.DbQuotaDriver
 
-   echo -e "\n- Original configuration:" >> $LOG
-   grep "quota_driver" /etc/neutron/neutron.conf >> $LOG
-
-   cp -a /etc/neutron/neutron.conf{,.$COPYEXT}
-
-   openstack-config --set /etc/neutron/neutron.conf quotas quota_driver neutron.db.quota_db.DbQuotaDriver
-
-   echo -e "\n- New configuration:" >> $LOG
-   grep "quota_driver" /etc/neutron/neutron.conf >> $LOG
 }
 
 #-----------------------------------------------------------------------
@@ -214,15 +183,9 @@ selinux()
 {
    fheader
 
-   echo "Setting SELinux Enforcing mode" | tee -a $LOG
 
-   cp -a /etc/selinux/config{,.$COPYEXT}
-
-   perl -pi -e 's/^SELINUX=.*/SELINUX=enforcing/' /etc/selinux/config
-
-   echo "Setting SELinux targeted type"
-
-   perl -pi -e 's/^SELINUXTYPE=.*/SELINUXTYPE=targeted/' /etc/selinux/config
+   grep 'SELINUX=enforcing' /etc/selinux/config
+   grep 'SELINUXTYPE=targeted' /etc/selinux/config
 }
 
 #-----------------------------------------------------------------------
@@ -633,6 +596,9 @@ motd()
    cat << EOF > /etc/motd
 --------------------------------------------------------------------------------
                         ATENCAO: Aviso Importante
+ 
+E proibido o acesso nao autorizado. Esse e um recurso de acesso restrito
+devidamente controlado, monitorado e de responsabilidade do Itau Unibanco
  
 Se voce nao possui autorizacao para acessar este recurso, desconecte
 imediatamente ou podera sofrer sancoes legais e/ou acao disciplinar.
@@ -1186,11 +1152,6 @@ EOF
 #selinux \
 #netrc \
 #ffirewall \
-#cinder \
-#horizon \
-#neutron \
-#keystone \
-#frabbitmq 
 
 #if $1 ; then
 #
@@ -1200,9 +1161,11 @@ EOF
 
 
       for MODULE in \
-         fheader \
          backup \
          keystone-ssl-certs \
+         cinder \
+         horizon \
+         neutron \
          fsshd \
          logindefs \
          sha512-passwords \
@@ -1222,9 +1185,11 @@ EOF
          unwanted-services \
          resolv-conf \
          locking-users \
+         keystone \
          flibvirtd \
          fstab \
-         apache ; do
+         apache \
+         frabbitmq ; do
 
          #read -p "Run $MODULE ? [s/N] " ANSWER
 
