@@ -1,14 +1,14 @@
 #!/bin/bash
 
-if [ $( whoami ) != "root" ] ; then
+#if [ $( whoami ) != "root" ] ; then
 
-   echo
-   echo "This script must be run as root"
-   echo "Change user and run it again"
-   echo
-   exit 11
-
-fi
+#   echo
+#   echo "This script must be run as root"
+#   echo "Change user and run it again"
+#   echo
+#   exit 11
+#
+#fi
 
 LOG="/tmp/hardening-$(date +%Y%m%d.log)"
 
@@ -20,23 +20,23 @@ LOCALIP=$(grep "^IPADDR" /etc/sysconfig/network-scripts/ifcfg-br-ex | sed -e 's/
 
 INTERNALIP=$(grep "^IPADDR" /etc/sysconfig/network-scripts/ifcfg-vlan101 | sed -e 's/IPADDR=//')
 
-if [ "$HOSTTYPE" = "control" ] ; then
-
-   if [ ! -f /etc/openstack-dashboard/.dsk ]; then
-
-      echo "I did not find /etc/openstack-dashboard/.dsk file"
-      echo 
-      echo "Press ENTER if this is the first controller where you are running this script" 
-      echo "and I will generate this file for you"
-      echo
-      echo "or copy /etc/openstack-dashboard/.dsk from first controller manually "
-      echo "and put it into /etc/openstack-dashboard directory"
-      echo
-      read -p "Press ENTER to continue or CTRL+C to cancel" 
-
-   fi
-
-fi
+#if [ "$HOSTTYPE" = "control" ] ; then
+#
+#   if [ ! -f /etc/openstack-dashboard/.dsk ]; then
+#
+#      echo "I did not find /etc/openstack-dashboard/.dsk file"
+#      echo 
+#      echo "Press ENTER if this is the first controller where you are running this script" 
+#      echo "and I will generate this file for you"
+#      echo
+#      echo "or copy /etc/openstack-dashboard/.dsk from first controller manually "
+#      echo "and put it into /etc/openstack-dashboard directory"
+#      echo
+#      read -p "Press ENTER to continue or CTRL+C to cancel" 
+#
+#   fi
+#
+#fi
 
 
 #-----------------------------------------------------------------------
@@ -1185,6 +1185,11 @@ EOF
 #selinux \
 #netrc \
 #ffirewall \
+#cinder \
+#horizon \
+#neutron \
+#keystone \
+#frabbitmq 
 
 #if $1 ; then
 #
@@ -1196,9 +1201,6 @@ EOF
       for MODULE in \
          backup \
          keystone-ssl-certs \
-         cinder \
-         horizon \
-         neutron \
          fsshd \
          logindefs \
          sha512-passwords \
@@ -1218,11 +1220,9 @@ EOF
          unwanted-services \
          resolv-conf \
          locking-users \
-         keystone \
          flibvirtd \
          fstab \
-         apache \
-         frabbitmq ; do
+         apache ; do
 
          #read -p "Run $MODULE ? [s/N] " ANSWER
 
