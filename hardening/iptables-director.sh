@@ -20,6 +20,10 @@ iptables -A INPUT -p tcp -m multiport --dports 3260,8776 -j ACCEPT
 iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 6081 -j ACCEPT
 iptables -A INPUT -p tcp -m multiport --dports 80,443 -j ACCEPT
 iptables -A INPUT -p tcp -m multiport --dports 27017 -j ACCEPT
+iptables -N LOGGING
+iptables -A INPUT -j LOGGING
+iptables -A OUTPUT -j LOGGING
+iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4
 iptables -P INPUT DROP
 iptables -P FORWARD DROP
 echo "Salva Configuracao atual"

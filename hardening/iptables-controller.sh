@@ -85,7 +85,7 @@ cat <<EOF > /etc/sysconfig/iptables
 -A OUTPUT -j nova-api-OUTPUT
 -A neutron-filter-top -j neutron-openvswi-local
 -A neutron-openvswi-sg-fallback -m comment --comment "Default drop rule for unmatched traffic." -j DROP
--A nova-api-INPUT -d $(grep "^IPADDR" /etc/sysconfig/network-scripts/ifcfg-vlan2901 | sed -e 's/IPADDR=//')/32 -p tcp -m tcp --dport 8775 -j ACCEPT
+-A nova-api-INPUT -d $(grep "^IPADDR" /etc/sysconfig/network-scripts/ifcfg-eth0 | sed -e 's/IPADDR=//')/32 -p tcp -m tcp --dport 8775 -j ACCEPT
 -A nova-filter-top -j nova-api-local
 COMMIT
 *raw
