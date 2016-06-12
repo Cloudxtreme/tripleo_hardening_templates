@@ -1,3 +1,4 @@
 parameters:
   ControllerHostnameFormat: '%stackname%-control-0%index%'
   ComputeHostnameFormat: '%stackname%-compute-0%index%'
+  CephStorageHostnameFormat: '%stackname%-cephstr-0%index%'

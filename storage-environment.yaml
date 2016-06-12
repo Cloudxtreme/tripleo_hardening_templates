@@ -1,6 +1,6 @@
 parameters:
   CinderEnableIscsiBackend: false
-  CinderEnableRbdBackend: false
+  CinderEnableRbdBackend: true
   CinderEnableNfsBackend: true
   NovaEnableRbdBackend: false
   GlanceBackend: file
@@ -10,3 +10,5 @@ parameters:
   GlanceFilePcmkFstype: nfs
   GlanceFilePcmkDevice: 172.16.0.254:/nfs/glance
   GlanceFilePcmkOptions: 'context=system_u:object_r:glance_var_lib_t:s0'
+  ControllerExtraConfig:  
+    cinder::api::default_volume_type: 'tripleo_ceph'

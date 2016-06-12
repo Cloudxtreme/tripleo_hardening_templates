@@ -1,0 +1,6 @@
+# An environment which enables configuration of an
+# Overcloud controller with Pacemaker.
+resource_registry:
+  OS::TripleO::ControllerConfig: /home/stack/tripleo_hardening_templates/puppet/controller-config-pacemaker.yaml
+  OS::TripleO::Tasks::ControllerPrePuppet: /usr/share/openstack-tripleo-heat-templates/extraconfig/tasks/pre_puppet_pacemaker.yaml
+  OS::TripleO::Tasks::ControllerPostPuppet: /usr/share/openstack-tripleo-heat-templates/extraconfig/tasks/post_puppet_pacemaker.yaml
