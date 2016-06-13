@@ -1,10 +1,9 @@
 #!/bin/bash
 export DIR=/home/stack/tripleo_hardening_templates
 
-openstack overcloud deploy --templates \
--t 90 --ntp-server 10.5.26.10 \
---libvirt-type qemu \
---control-scale 3 --compute-scale 2 \
+openstack overcloud update -i overcloud \
+--templates \
+-e $DIR/yum_update.yaml \
 -e $DIR/hostname.yaml \
 -e $DIR/puppet-pacemaker.yaml \
 -e $DIR/network-environment.yaml \
@@ -13,5 +12,3 @@ openstack overcloud deploy --templates \
 -e $DIR/enable-tls.yaml \
 -e $DIR/inject-trust-anchor.yaml \
 -e $DIR/storage-environment.yaml
-#--ceph-storage-scale=3 \
-#-e $DIR/post-deploy.yaml
