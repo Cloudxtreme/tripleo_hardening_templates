@@ -1,0 +1,6 @@
+resource_registry:
+ OS::TripleO::Tasks::Package: /usr/share/openstack-tripleo-heat-templates/extraconfig/tasks/yum_update.yaml
+ #OS::TripleO::Tasks::Package: /home/stack/tripleo_hardening_templates/yum_update.yaml
+
+#parameters:
+#  command_arguments: '--disablerepo=rhel-7-server-extras-rpms --disablerepo=rhel-7-server-openstack-7.0-rpms'

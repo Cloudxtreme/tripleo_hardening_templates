@@ -1,14 +1,15 @@
 #!/bin/bash
 export DIR=/home/stack/tripleo_hardening_templates
 
-openstack overcloud update -i overcloud \
---templates \
--e $DIR/yum_update.yaml \
--e $DIR/hostname.yaml \
--e $DIR/puppet-pacemaker.yaml \
+openstack overcloud update stack \
+-i overcloud --templates \
+-e $DIR/yum_update_disable.yaml \
 -e $DIR/network-environment.yaml \
 -e $DIR/rhel-registration/environment-rhel-registration.yaml \
--e $DIR/rhel-registration/rhel-registration-resource-registry.yaml \
--e $DIR/enable-tls.yaml \
--e $DIR/inject-trust-anchor.yaml \
--e $DIR/storage-environment.yaml
+-e $DIR/rhel-registration/rhel-registration-resource-registry.yaml
+#-e $DIR/hostname.yaml \
+#-e $DIR/puppet-pacemaker.yaml \
+#-e $DIR/enable-tls.yaml \
+#-e $DIR/inject-trust-anchor.yaml \
+#-e $DIR/storage-environment.yaml
+#openstack overcloud update -i overcloud --templates -e $DIR/yum_update.yaml -e $DIR/hostname.yaml -e $DIR/puppet-pacemaker.yaml -e $DIR/network-environment.yaml -e $DIR/rhel-registration/environment-rhel-registration.yaml -e $DIR/rhel-registration/rhel-registration-resource-registry.yaml -e $DIR/enable-tls.yaml -e $DIR/inject-trust-anchor.yaml -e $DIR/storage-environment.yaml
