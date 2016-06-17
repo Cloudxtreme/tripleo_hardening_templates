@@ -1,10 +1,13 @@
 #!/bin/bash
-export DIR=/home/stack/tripleo_hardening_templates
+#export DIR=/home/stack/tripleo_hardening_templates
+export DIR=/home/stack/templates
 
 openstack overcloud deploy --templates \
 -t 90 --ntp-server 10.5.26.10 \
 --libvirt-type qemu \
 --control-scale 3 --compute-scale 1 \
+-e $DIR/limits.yaml \
+-e $DIR/firstboot-environment.yaml \
 -e $DIR/rhel-registration/environment-rhel-registration.yaml \
 -e $DIR/rhel-registration/rhel-registration-resource-registry.yaml
 #-e $DIR/network-environment.yaml \
