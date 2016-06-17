@@ -12,8 +12,6 @@ resources:
     properties:
       config: |
         #!/bin/bash
-        sleep 10
-        echo "redhat" | passwd root --stdin
         touch /home/heat-admin/hello.txt
 
 outputs:

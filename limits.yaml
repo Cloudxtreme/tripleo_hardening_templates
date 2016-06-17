@@ -1,6 +1,4 @@
-resource_registry:
-  OS::TripleO::NodeUserData: /home/stack/templates/fix_rabbit.yaml
-
 parameters:
   MysqlMaxConnections: 8192
+  RabbitFDLimit: 65436
 
