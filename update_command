@@ -3,10 +3,12 @@ export DIR=/home/stack/tripleo_hardening_templates
 
 openstack overcloud update stack \
 -i overcloud --templates \
--e $DIR/yum_update_disable.yaml \
--e $DIR/network-environment.yaml \
+-e /usr/share/openstack-tripleo-heat-templates/overcloud-resource-registry-puppet.yaml \
+-e $DIR/limits.yaml \
+-e $DIR/firstboot-environment.yaml \
 -e $DIR/rhel-registration/environment-rhel-registration.yaml \
 -e $DIR/rhel-registration/rhel-registration-resource-registry.yaml
+#-e $DIR/yum_update_disable.yaml \
 #-e $DIR/hostname.yaml \
 #-e $DIR/puppet-pacemaker.yaml \
 #-e $DIR/enable-tls.yaml \

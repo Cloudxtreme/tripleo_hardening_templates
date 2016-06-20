@@ -7,12 +7,12 @@ openstack overcloud deploy --templates \
 --libvirt-type qemu \
 --control-scale 3 --compute-scale 1 \
 -e $DIR/limits.yaml \
--e $DIR/firstboot-environment.yaml \
--e $DIR/rhel-registration/environment-rhel-registration.yaml \
--e $DIR/rhel-registration/rhel-registration-resource-registry.yaml
+-e $DIR/puppet-pacemaker.yaml
+#-e $DIR/rhel-registration/environment-rhel-registration.yaml \
+#-e $DIR/rhel-registration/rhel-registration-resource-registry.yaml
+#-e $DIR/firstboot-environment.yaml \
 #-e $DIR/network-environment.yaml \
 #-e $DIR/hostname.yaml \
-#-e $DIR/puppet-pacemaker.yaml \
 #-e $DIR/enable-tls.yaml \
 #-e $DIR/inject-trust-anchor.yaml \
 #-e $DIR/storage-environment.yaml

@@ -1,4 +1,5 @@
 parameters:
   MysqlMaxConnections: 8192
   RabbitFDLimit: 65436
-
+  controllerExtraConfig:
+    tripleo::loadbalancer::haproxy_default_maxconn: 8192
