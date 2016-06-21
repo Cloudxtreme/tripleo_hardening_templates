@@ -1,7 +1,6 @@
 parameters:
   CinderEnableIscsiBackend: false
-#  CinderEnableRbdBackend: true
-  CinderEnableRbdBackend: false
+  CinderEnableRbdBackend: true
   CinderEnableNfsBackend: true
   NovaEnableRbdBackend: false
   GlanceBackend: file

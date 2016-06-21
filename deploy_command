@@ -6,15 +6,15 @@ openstack overcloud deploy --templates \
 -t 90 --ntp-server 10.5.26.10 \
 --libvirt-type qemu \
 --control-scale 3 --compute-scale 1 \
--e $DIR/limits.yaml \
--e $DIR/puppet-pacemaker.yaml
-#-e $DIR/rhel-registration/environment-rhel-registration.yaml \
-#-e $DIR/rhel-registration/rhel-registration-resource-registry.yaml
+--ceph-storage-scale=3 \
+-e $DIR/network-environment.yaml \
+-e $DIR/storage-environment.yaml \
+-e $DIR/rhel-registration/environment-rhel-registration.yaml \
+-e $DIR/rhel-registration/rhel-registration-resource-registry.yaml
 #-e $DIR/firstboot-environment.yaml \
-#-e $DIR/network-environment.yaml \
+#-e $DIR/limits.yaml \
+#-e $DIR/puppet-pacemaker.yaml
 #-e $DIR/hostname.yaml \
 #-e $DIR/enable-tls.yaml \
 #-e $DIR/inject-trust-anchor.yaml \
-#-e $DIR/storage-environment.yaml
-#--ceph-storage-scale=3 \
 #-e $DIR/post-deploy.yaml
